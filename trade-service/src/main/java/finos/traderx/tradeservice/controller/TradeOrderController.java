@@ -44,16 +44,18 @@ public class TradeOrderController {
 	@PostMapping("/")
 	public ResponseEntity<TradeOrder> createTradeOrder(@ApiParam("the intendeded trade order") @RequestBody TradeOrder tradeOrder) {
 		log.info("Called createTradeOrder");
-		
+		/*
 		if (!validateTicker(tradeOrder.getSecurity())) 
 		{
 			throw new ResourceNotFoundException(tradeOrder.getSecurity() + " not found in Reference data service.");
 		}
-		else if(!validateAccount(tradeOrder.getAccountId()))
+		else if( !validateAccount(tradeOrder.getAccountId()))
 		{
 			throw new ResourceNotFoundException(tradeOrder.getAccountId() + " not found in Account service.");
 		}
-		else
+		
+		
+		else*/
 		{
 			try{
 				log.info("Trade is valid. Submitting {}", tradeOrder);
